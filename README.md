@@ -1,15 +1,15 @@
-#RETO-DEVCO
+# RETO-DEVCO
 
 Reto para Devco, consiste en automatizar la pagina de viajes https://www.travelocity.com/ , automatizando 5 escenario y 15 en ejecucion manual
 
-##Automatizados
+## Automatizados
 Caso #1 - Se busca el precio mas economico en la opcion Stay
 Caso #2 - Buscar el carro mas caro en la opcion Cars
 Caso #3 - Bucar el vuelo mas barato en la opcion Flights
 Caso #4 - Probar que ingrese a la opcion things-to-do y luego a History & culture
 Caso #5 - Probar el cambio de idioma de ingles a español
 
-##Manuales
+## Manuales
 
 Caso #6 - Cambiar de lenguaje y se busca el precio mas economico en la opcion Hospedaje
 Caso #7 - Cambiar de lenguaje y se buscar el carro mas caro en la opcion Autos
