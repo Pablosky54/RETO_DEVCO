@@ -21,21 +21,21 @@ import net.thucydides.core.annotations.Managed;
 public class TravelocityStepDefinition {
 
 	 @Managed
-	    private static WebDriver suNavegador;
+	    private static WebDriver chrome;
 
 	    @Before
 	    public void setTheStage() {
 	        OnStage.setTheStage(new OnlineCast());
 	    }
-	
-	    @Given("^que Juan ingresa a la pagina travelocity$")
-	public void queIngresaALaPaginaTravelocity() {
-		theActorCalled("Juan").whoCan(BrowseTheWeb.with(suNavegador))
+
+	    @Given("^Juan star of page$")
+		public void juanStarOfPage() throws Exception {
+		theActorCalled("Juan").whoCan(BrowseTheWeb.with(chrome))
         .wasAbleTo(Open.url("https://www.travelocity.com/"));
 	}
 
-	    @When("^escoge la opcion stay y llena el formulario$")
-	public void escogeLaOpcionStayYLlenaElFormulario(List<DatosSolicitudIP> arg1){
+	    @When("^chose option Stay and complete of form$")
+	public void choseOptionStayAndCompleteOfForm(List<DatosSolicitudIP> arg1){
 	    // Write code here that turns the phrase above into concrete actions
 	    // For automatic transformation, change DataTable to one of
 	    // List<YourType>, List<List<E>>, List<Map<K,V>> or Map<K,V>.
@@ -43,37 +43,35 @@ public class TravelocityStepDefinition {
 	    
 	}
 
-	    @Then("^vera la pagina de estadias$")
-	public void veraLaPaginaDeEstadias()  {
+	    @Then("^look page in stay$")
+	public void lookPageInStay()  {
 	    // Write code here that turns the phrase above into concrete actions
 	   
 	}
 
-	@Then("^buscara la opcion mas economica$")
-	public void buscaraLaOpcionMasEconomica()  {
+	@Then("^search option cheap in page stay$")
+	public void searchOptionCheapInPageStay()  {
 	    // Write code here that turns the phrase above into concrete actions
 	   
 	}
 
-	@When("^escoge la opcion Cars y llena el formulario$")
-	public void escogeLaOpcionCarsYLlenaElFormulario(List<DatosSolicitudIP> arg1) {
-	    // Write code here that turns the phrase above into concrete actions
-	    // For automatic transformation, change DataTable to one of
-	    // List<YourType>, List<List<E>>, List<Map<K,V>> or Map<K,V>.
-	    // E,K,V must be a scalar (String, Integer, Date, enum etc)
-	    
-	}
-	
-	 @Then("^vera la pagina de carros$")
-		public void veraLaPaginaDeCarros()  {
+
+	 @When("^chose option Cars and complete of form$")
+		public void choseOptionCarsAndCompleteOfForm(List<DatosSolicitudIP> arg1) {
 		    // Write code here that turns the phrase above into concrete actions
 		   
 		}
-	
-	@Then("^buscara la opcion mas economica de carros$")
-	public void buscaraLaOpcionMasEconomicaDeCarrros()  {
-	    // Write code here that turns the phrase above into concrete actions
-	   
+
+	@Then("^look page cars$")
+	public void lookPageCars()  {
+		// Write code here that turns the phrase above into concrete actions
+
+	}
+
+	@Then("^search option cheap in page cars$")
+	public void searchOptionCheapInPageCars()  {
+		// Write code here that turns the phrase above into concrete actions
+
 	}
 	
 }
