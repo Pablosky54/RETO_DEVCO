@@ -1,5 +1,6 @@
 package com.co.devco.task;
 
+import com.co.devco.interactions.ComparePrice;
 import com.co.devco.models.DataStay;
 import com.co.devco.ui.HomePage;
 import com.co.devco.ui.StayPage;
@@ -23,6 +24,7 @@ public class CompletStay implements Task {
                 , Enter.theValue(new  DataStay().getplace()).into(StayPage.GOING_TO)
                 , WaitUntil.the(StayPage.BTN_SEARCH, WebElementStateMatchers.isEnabled())
                 ,Click.on(StayPage.BTN_SEARCH)
+                , ComparePrice.with(StayPage.PRICE)
 
         );
 
