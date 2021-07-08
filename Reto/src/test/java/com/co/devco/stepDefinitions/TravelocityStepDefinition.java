@@ -4,9 +4,9 @@ import static net.serenitybdd.screenplay.actors.OnStage.theActorCalled;
 
 import java.util.List;
 
+import com.co.devco.models.DataCars;
+import com.co.devco.task.CompletStay;
 import org.openqa.selenium.WebDriver;
-
-import com.co.devco.models.DatosSolicitudIP;
 
 import cucumber.api.java.Before;
 import cucumber.api.java.en.Given;
@@ -17,6 +17,7 @@ import net.serenitybdd.screenplay.actions.Open;
 import net.serenitybdd.screenplay.actors.OnStage;
 import net.serenitybdd.screenplay.actors.OnlineCast;
 import net.thucydides.core.annotations.Managed;
+import static net.serenitybdd.screenplay.actors.OnStage.theActorInTheSpotlight;
 
 public class TravelocityStepDefinition {
 
@@ -35,11 +36,9 @@ public class TravelocityStepDefinition {
 	}
 
 	    @When("^chose option Stay and complete of form$")
-	public void choseOptionStayAndCompleteOfForm(List<DatosSolicitudIP> arg1){
-	    // Write code here that turns the phrase above into concrete actions
-	    // For automatic transformation, change DataTable to one of
-	    // List<YourType>, List<List<E>>, List<Map<K,V>> or Map<K,V>.
-	    // E,K,V must be a scalar (String, Integer, Date, enum etc)
+	public void choseOptionStayAndCompleteOfForm(){
+			theActorInTheSpotlight().attemptsTo(CompletStay.with());
+
 	    
 	}
 
@@ -57,7 +56,7 @@ public class TravelocityStepDefinition {
 
 
 	 @When("^chose option Cars and complete of form$")
-		public void choseOptionCarsAndCompleteOfForm(List<DatosSolicitudIP> arg1) {
+		public void choseOptionCarsAndCompleteOfForm(List<DataCars> data) {
 		    // Write code here that turns the phrase above into concrete actions
 		   
 		}

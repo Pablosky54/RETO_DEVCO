@@ -9,7 +9,7 @@ import org.junit.runner.RunWith;
 @CucumberOptions(features = "src/test/resources/features/PaginaTravelocity.feature",
         glue = "com.co.devco.stepDefinitions",
         snippets = SnippetType.CAMELCASE
-        //,tags= {""}
+        ,tags= {"@case1"}
         ,monochrome =  true)
 
 public class TravelocityRunner {
